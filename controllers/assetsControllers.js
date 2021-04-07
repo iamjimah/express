@@ -44,7 +44,7 @@ const createAnAsset = (req, res) => {
   res.json(assets);
 };
 
-modules.export = {
+module.exports = {
   getAllAssets,
   getAnAsset,
   createAnAsset,

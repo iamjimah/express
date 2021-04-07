@@ -1,6 +1,4 @@
-const express = require("express");
-
-assets[
+const assets = [
   ({
     brand: "Ford",
     model: "Ranger",
@@ -35,7 +33,7 @@ assets[
     Max_speed: "150m/Hr",
     Price: "USD $270,000",
     ASW: "4 yrs",
-  })
+  }),
 ];
 
-modules.export = assets;
+module.exports = assets;

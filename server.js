@@ -1,4 +1,5 @@
 const express = require("express");
+const assets = require("./assets");
 
 const app = express();
 const assestsRoutes = require("./routes/assetsRoutes");
@@ -8,8 +9,10 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/assets", assestsRoutes);
 
-app.get("/", (req, res) => res.json("This is an api for my assets"));
+app.get("/api/assets", (req, res) => {
+  res.json(assets);
+});
 
 const port = process.env.PORT || 6000;
 
-app.listen(port, () => console.log("server is running on port ${port}"));
+app.listen(port, console.log(`server is running on port ${port}`));
